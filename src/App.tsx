@@ -1,4 +1,3 @@
-import "./App.css";
 import { SelectPreview } from "./components/SelectPreview";
 
 function App() {
