@@ -10,10 +10,13 @@ export type SelectProps = {
   size?: Sizes;
   placeholder: string;
   options: SelectOption[];
+  onChange: (value: string) => void;
+  value?: string;
 };
 
 type SelectOption = {
-  label: string;
+  title: string;
+  id: string;
   value: string;
 };
 

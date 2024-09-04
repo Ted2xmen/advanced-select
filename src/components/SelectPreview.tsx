@@ -6,18 +6,13 @@ export const SelectPreview = () => {
     ["posts"],
     "https://jsonplaceholder.typicode.com/posts"
   );
+
+  const handlePreviewChange = (value: string) => {
+    console.log(value);
+  };
+
   return (
     <section className="flex items-center gap-6">
-      <AdvancedSelect
-        label="Search"
-        placeholder="Search an option"
-        name="searchSelect"
-        variant="search"
-        size="sm"
-        isLoading={isLoading}
-        options={options}
-      />
-
       <AdvancedSelect
         label="Select"
         placeholder="Select an option"
@@ -26,6 +21,8 @@ export const SelectPreview = () => {
         size="md"
         isLoading={isLoading}
         options={options}
+        onChange={handlePreviewChange}
+        value=""
       />
     </section>
   );
